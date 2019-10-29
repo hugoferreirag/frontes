@@ -7,7 +7,7 @@
 
             <input v-if="showSignup" v-model="user.name" type="text" placeholder="Nome">
             <input v-model="user.email" name="email" type="text" placeholder="E-mail">
-            <label for="">Data de nascimento</label>
+            <label v-if="showSignup" for="">Data de nascimento</label>
             <input v-if="showSignup" v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label>   
             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 

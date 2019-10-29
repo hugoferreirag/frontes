@@ -6,19 +6,21 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start": "npm run serves",
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1",
     "axios": "^0.19.0",
     "bootstrap-vue": "^2.0.4",
     "font-awesome": "4.7.0",
+    "heroku": "^7.33.3",
+    "heroku-cli": "^7.0.9",
     "highlightjs": "9.10.0",
     "liquor-tree": "0.2.32",
+    "vue": "^2.5.2",
     "vue-gravatar": "1.2.1",
     "vue-mq": "0.2.1",
+    "vue-router": "^3.0.1",
     "vue-toasted": "1.1.24",
     "vue2-editor": "2.6.6",
     "vuex": "3.0.1"
