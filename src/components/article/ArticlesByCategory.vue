@@ -4,13 +4,13 @@
              sub="Usuario" />
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-12">
 
-                    <b-img thumbnail fluid src="~@/assets/img/nene.jpeg" alt="Image 1"></b-img>
+                    <b-img center thumbnail fluid src="~@/assets/img/nene.jpeg" alt="Image 1"></b-img>
 
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-12">
 
                     <ul > 
                         <li> <h5>Nome: {{User.name}} </h5> </li>
