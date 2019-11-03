@@ -104,7 +104,7 @@ export default {
     input{
         border-radius:5px;
         font-family: 'Courier New', Courier, monospace,;
-        width:150px
+        width:200px
     }
     h6{
         font-family: 'Courier New', Courier, monospace
