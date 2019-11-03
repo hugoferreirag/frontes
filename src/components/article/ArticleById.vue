@@ -10,21 +10,21 @@
             </div>
             <div class="col-md-6">
 
-                <h5>Nome:</h5>
+                <h6>Nome:</h6>
                 <input v-model="userers.name"  type="text">
-                <h5>Email:</h5>
+                <h6>Email:</h6>
                 <input v-model="userers.email"  type="text">
-                <h5>Nascimento:</h5>
+                <h6>Nascimento:</h6>
                 <input v-model="userers.nascimento"  type="date">
-                <h5>Data de Inicio no Ramo:</h5>
+                <h6>Data de Inicio no Ramo:</h6>
                 <input v-model="userers.data_trabalho"  type="date">
-                <h5>Salário:</h5>
+                <h6>Salário:</h6>
                 <input v-model="userers.salario"  type="number">
-                <h5>Empresa:</h5>
+                <h6>Empresa:</h6>
                 <input v-model="userers.empresa"  type="text">
-                <h5>Senha:</h5>
+                <h6>Senha:</h6>
                 <input v-model="userers.password"  type="password">
-                <h5>Confirme a senha:</h5>
+                <h6>Confirme a senha:</h6>
                 <input v-model="userers.confirmPassword"  type="password"> <br><hr>
                 <button @click="editar">Confirmar Edição</button> <button @click="userers={}">Resetar</button>
                 
@@ -105,7 +105,7 @@ export default {
         border-radius:5px;
         font-family: 'Courier New', Courier, monospace,
     }
-    h5{
+    h6{
         font-family: 'Courier New', Courier, monospace
     }
     .article-content {
