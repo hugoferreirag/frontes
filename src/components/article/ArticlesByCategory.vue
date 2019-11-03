@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <b-img center thumbnail fluid src="~@/assets/img/nene.jpeg" alt="Image 1"></b-img>
+                    <b-img center thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img>
 
                 </div>
 
