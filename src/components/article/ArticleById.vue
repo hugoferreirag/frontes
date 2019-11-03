@@ -5,7 +5,7 @@
 
             <div class="col-md-6">
 
-                <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=54" alt="Image 1"></b-img>
+                <b-img thumbnail fluid src="~@/assets/img/nene.jpg" alt="Image 1"></b-img>
 
             </div>
             <div class="col-md-6">
@@ -101,6 +101,13 @@ export default {
 </script>
 
 <style>
+    input{
+        border-radius:5px;
+        font-family: 'Courier New', Courier, monospace,
+    }
+    h5{
+        font-family: 'Courier New', Courier, monospace
+    }
     .article-content {
         background-color: #FFF;
         border-radius: 8px;
