@@ -11,12 +11,12 @@
                 </div>
 
                 <div class="col-md-12">
-                         <span>Nome: {{User.name}} </span> 
-                         <span>Data de nascimento : {{ new Date(User.nascimento).toLocaleDateString() }} </span>
-                         <span>Inicio no ramo: {{new Date(User.trabalho_data).toLocaleDateString()}}</span> 
-                         <span>Email : {{User.email}} </span>
-                         <span>É um cientista? : {{User.cientista == true? 'sim' : 'Não'}}</span> 
-                         <span>Salário : {{User.salario}}</span> 
+                         <span>Nome: {{ User.name }} </span> 
+                         <span>Senioridade: {{ User.nivel }}</span>
+                         <span>Inicio no ramo: {{new Date( User.trabalho_data ).toLocaleDateString()}}</span> 
+                         <span>Email : {{ User.email }} </span>
+                         <span>É um cientista? : {{ User.cientista == true? 'sim' : 'Não' }}</span> 
+
                 </div>
             </div>
         <div class="load-more">
