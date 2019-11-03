@@ -25,7 +25,7 @@
                 <h5>Senha:</h5>
                 <input v-model="userers.password"  type="password">
                 <h5>Confirme a senha:</h5>
-                <input v-model="userers.confirmPassword"  type="password">
+                <input v-model="userers.confirmPassword"  type="password"> <br><hr>
                 <button @click="editar">Confirmar Edição</button> <button @click="userers={}">Resetar</button>
                 
             </div>
