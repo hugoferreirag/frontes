@@ -10,9 +10,16 @@
 
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-6">
                          <span class="dados">{{ User.name }} </span> <br>
                          <span class="dados">{{ User.nivel }}</span>
+                         
+                </div>
+
+                <div class="col-md-6">
+                         
+                         <b-button variant='outline-success'>Adicionar</b-button> <br>
+                         <b-button variant='outline-primary'>Sobre..</b-button> <br>
                          
                 </div>
             </div>
