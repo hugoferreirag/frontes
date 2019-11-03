@@ -3,7 +3,7 @@
         <PageTitle 
              sub="Usuario" />
 
-            <div class="row">
+            <div style="padding-left:80px" class="row">
                 <div class="col-md-12">
 
                     <b-img left thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img>
@@ -11,8 +11,8 @@
                 </div>
 
                 <div class="col-md-12">
-                         <span>{{ User.name }} </span> <br>
-                         <span>{{ User.nivel }}</span>
+                         <span class="dados">{{ User.name }} </span> <br>
+                         <span class="dados">{{ User.nivel }}</span>
                          
                 </div>
             </div>
@@ -86,5 +86,9 @@ export default {
         flex-direction: column;
         align-items: center;
         margin-top: 25px;
+    }
+    .dados{
+        font-family: 'Courier New', Courier, monospace;
+        font-size:15px
     }
 </style>
