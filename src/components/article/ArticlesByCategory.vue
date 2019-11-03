@@ -2,15 +2,27 @@
     <div class="articles-by-User">
         <PageTitle 
              sub="Usuario" />
-        <ul > 
-            <li> <h5>Nome: {{User.name}} </h5> </li>
-            <li> <h5>Data de nascimento : {{ new Date(User.nascimento).toLocaleDateString() }} </h5></li>
-            <li> <h5>Inicio no ramo: {{new Date(User.trabalho_data).toLocaleDateString()}}</h5> </li>
-            <li> <h5>Email : {{User.email}} </h5></li>
-            <li> <h5>É um cientista? : {{User.cientista == true? 'sim' : 'Não'}}</h5> </li>
-            <li> <h5>Salário : {{User.salario}}</h5> </li>
-          
-        </ul>
+
+            <div class="row">
+                <div class="col-md-4">
+
+                    <b-img thumbnail fluid src="~@/assets/img/nene.jpeg" alt="Image 1"></b-img>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <ul > 
+                        <li> <h5>Nome: {{User.name}} </h5> </li>
+                        <li> <h5>Data de nascimento : {{ new Date(User.nascimento).toLocaleDateString() }} </h5></li>
+                        <li> <h5>Inicio no ramo: {{new Date(User.trabalho_data).toLocaleDateString()}}</h5> </li>
+                        <li> <h5>Email : {{User.email}} </h5></li>
+                        <li> <h5>É um cientista? : {{User.cientista == true? 'sim' : 'Não'}}</h5> </li>
+                        <li> <h5>Salário : {{User.salario}}</h5> </li>
+                    
+                    </ul>
+                </div>
+            </div>
         <div class="load-more">
             <button v-if="loadMore"
                 class="btn btn-lg btn-outline-primary"
