@@ -1,23 +1,32 @@
 <template>
     <div class="article-by-id">
-        <h5>Nome:</h5>
-        <input v-model="userers.name"  type="text">
-        <h5>Email:</h5>
-        <input v-model="userers.email"  type="text">
-        <h5>Nascimento:</h5>
-        <input v-model="userers.nascimento"  type="date">
-        <h5>Data de Inicio no Ramo:</h5>
-        <input v-model="userers.data_trabalho"  type="date">
-        <h5>Salário:</h5>
-        <input v-model="userers.salario"  type="number">
-        <h5>Empresa:</h5>
-        <input v-model="userers.empresa"  type="text">
-        <h5>Senha:</h5>
-        <input v-model="userers.password"  type="password">
-        <h5>Confirme a senha:</h5>
-        <input v-model="userers.confirmPassword"  type="password">
+        <div>
 
-        <button @click="editar">Confirmar Edição</button> <button @click="userers={}">Resetar</button>
+            <b-img thumbnail fluid src="https://picsum.photos/250/250/?image=54" alt="Image 1"></b-img>
+
+        </div>
+        <div>
+
+            <h5>Nome:</h5>
+            <input v-model="userers.name"  type="text">
+            <h5>Email:</h5>
+            <input v-model="userers.email"  type="text">
+            <h5>Nascimento:</h5>
+            <input v-model="userers.nascimento"  type="date">
+            <h5>Data de Inicio no Ramo:</h5>
+            <input v-model="userers.data_trabalho"  type="date">
+            <h5>Salário:</h5>
+            <input v-model="userers.salario"  type="number">
+            <h5>Empresa:</h5>
+            <input v-model="userers.empresa"  type="text">
+            <h5>Senha:</h5>
+            <input v-model="userers.password"  type="password">
+            <h5>Confirme a senha:</h5>
+            <input v-model="userers.confirmPassword"  type="password">
+            <button @click="editar">Confirmar Edição</button> <button @click="userers={}">Resetar</button>
+            
+        </div>
+
        
     </div>
 </template>
