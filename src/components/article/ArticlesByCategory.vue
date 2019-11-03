@@ -6,17 +6,14 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <b-img center thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img>
+                    <b-img left thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img>
 
                 </div>
 
                 <div class="col-md-12">
-                         <span>Nome: {{ User.name }} </span> 
-                         <span>Senioridade: {{ User.nivel }}</span>
-                         <span>Inicio no ramo: {{new Date( User.trabalho_data ).toLocaleDateString()}}</span> 
-                         <span>Email : {{ User.email }} </span>
-                         <span>É um cientista? : {{ User.cientista == true? 'sim' : 'Não' }}</span> 
-
+                         <span>{{ User.name }} </span> <br>
+                         <span>{{ User.nivel }}</span>
+                         
                 </div>
             </div>
         <div class="load-more">
