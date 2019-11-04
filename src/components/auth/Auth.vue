@@ -4,26 +4,30 @@
             <img src="@/assets/logo.png" width="200" alt="Logo" />
             <hr>
             <div class="h4 text-center mb-4">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
-
+             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
+             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
             <input v-if="showSignup" v-model="user.name" type="text" placeholder="Nome">
             <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
              <input v-model="user.password" name="password" type="password" placeholder="Senha">
-            <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
+               <input v-if="showSignup" v-model="user.confirmPassword"
+                type="password" placeholder="Confirme a Senha">
+             
+            
             <label v-if="showSignup" for="">Data de nascimento</label>
             <input v-if="showSignup" v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
               
-            <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
+           
             
             <div v-else></div>
            
-            <input v-if="showSignup" v-model="user.confirmPassword"
-                type="password" placeholder="Confirme a Senha">
+          
                 <label  v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
             <input v-if="showSignup" v-model="user.trabalho_data" name="data" type="date" placeholder="">
             <input v-if="showSignup" v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
             <input v-if="showSignup" v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
             <input v-if="showSignup" v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
-            <button v-if="showSignup" @click="signup">Registrar</button>
+            <button v-if="showSignup && user.cientista===true"  @click="signup">Registrar</button>
+             <button v-if="showSignup && user.cientista===false""  disabled @click="signup">Registrar</button>
             <button v-else @click="signin">Entrar</button>
 
             <a style="text-align:center" href @click.prevent="showSignup = !showSignup">
