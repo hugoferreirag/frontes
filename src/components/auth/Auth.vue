@@ -64,7 +64,11 @@ export default {
                     localStorage.setItem(userKey, JSON.stringify(res.data))
                     this.$router.push({ path: '/' })
                 })
-                .catch(showError)
+                .catch(
+                 <b-alert show dismissible>
+   Usuário ou senha incorretos!!;</b>
+  </b-alert>
+                )
         },
         signup() {
             axios.post(`${baseApiUrl}/signup`, this.user)
