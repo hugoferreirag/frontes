@@ -10,7 +10,7 @@
             <input v-if="showSignup && user.cientista===true"  v-model="user.name" type="text" placeholder="Nome">
             <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
              <input v-model="user.password" name="password" type="password" placeholder="Senha">
-               <inpu tv-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
+               <input v-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">
              
             
