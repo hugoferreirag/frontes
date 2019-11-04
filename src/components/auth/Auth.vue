@@ -7,10 +7,10 @@
             <div class="h4 text-center mb-4">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
              <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
-            <inputv-if="showSignup && user.cientista===true"  v-model="user.name" type="text" placeholder="Nome">
+            <input v-if="showSignup && user.cientista===true"  v-model="user.name" type="text" placeholder="Nome">
             <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
              <input v-model="user.password" name="password" type="password" placeholder="Senha">
-               <inputv-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
+               <inpu tv-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">
              
             
