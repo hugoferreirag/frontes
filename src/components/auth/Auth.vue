@@ -91,7 +91,7 @@ export default {
         align-items: center;
     }
     .auth-modal {
-        background-color: #FFF;
+        background-color:red;
         width: 350px;
         padding: 35px;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
