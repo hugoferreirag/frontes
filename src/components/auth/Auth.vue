@@ -23,12 +23,12 @@
            
           
             <label v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
-            <inputv-if="showSignup && user.cientista===true"  v-model="user.trabalho_data" name="data" type="date" placeholder="">
-            <inputv-if="showSignup && user.cientista===true"  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
+            <input v-if="showSignup && user.cientista===true"  v-model="user.trabalho_data" name="data" type="date" placeholder="">
+            <input v-if="showSignup && user.cientista===true"  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
             <input v-if="showSignup && user.cientista===true"  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
             <input v-if="showSignup && user.cientista===true"  v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
             <button v-if="showSignup && user.cientista===true"   @click="signup">Registrar</button>
-             <button v-if="showSignup && user.cientista===false" disabled @click="signup">Registrar</button>
+            <button v-if="user.cientista===false" disabled @click="signup">Registrar</button>
             <button v-else @click="signin">Entrar</button>
 
             <a style="text-align:center" href @click.prevent="showSignup = !showSignup">
