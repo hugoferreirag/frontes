@@ -28,7 +28,7 @@
             <input v-if="showSignup && user.cientista===true"  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
             <input v-if="showSignup && user.cientista===true"  v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
             <button v-if="showSignup && user.cientista===true"   @click="signup">Registrar</button>
-             <button v-if="showSignup && user.cientista===false""  disabled @click="signup">Registrar</button>
+             <button v-if="showSignup && user.cientista===false" disabled @click="signup">Registrar</button>
             <button v-else @click="signin">Entrar</button>
 
             <a style="text-align:center" href @click.prevent="showSignup = !showSignup">
