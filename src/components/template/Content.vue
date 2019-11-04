@@ -13,7 +13,7 @@ export default {
 <style>
     .content {
         grid-area: content;
-        background-image: url("giphy.gif");
+        background-image: url("~@/assets/giphy.gif");
         padding: 20px;
     }
 </style>
