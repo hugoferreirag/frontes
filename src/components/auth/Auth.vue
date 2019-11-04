@@ -1,7 +1,9 @@
 <template>
     <div class="auth-content">
         <div class="auth-modal">
-            <img src="@/assets/Sem título.png" width="200" alt="Logo" />
+            <img v-if="!showSignup" src="@/assets/Sem título.png" width="200" alt="Logo" />
+            <img v-else src="@/assets/logo.png" width="200" alt="Logo" />
+            
             <hr>
             <div class="auth-title">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label>   
