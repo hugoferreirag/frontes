@@ -18,7 +18,7 @@
            
             <input v-if="showSignup" v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">
-                <label  v-if="showSignup && user.cientista=true" for="">Quando começou no ramo da Ciência da computação?</label>
+                <label  v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
             <input v-if="showSignup" v-model="user.trabalho_data" name="data" type="date" placeholder="">
             <input v-if="showSignup" v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
             <input v-if="showSignup" v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
