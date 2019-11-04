@@ -5,14 +5,19 @@
             <img v-else src="@/assets/logo.png" width="200" alt="Logo" />
             
             <hr>
-            <div class="auth-title">{{ showSignup ? 'Teste' : 'Login' }}</div>
+            <div class="auth-title">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label>   
             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
             <input  v-if="user.cientista === true && showSignup " value="Sim :)" type="text">
             <input disabled v-else-if="user.cientista === false && showSignup" value="Não :(" type="text">
 
             <input input  v-if="user.cientista === true && showSignup " append-icon="place" v-model="user.name" type="text" placeholder="Nome">
-            <input v-model="user.email"  name="email" type="text" placeholder="E-mail">
+            <v-text-field
+            v-model=user.email
+            label="Email"
+            prepend-icon="place"
+          ></v-text-field>
+
             <label input  v-if="user.cientista === true && showSignup " v-if="showSignup" for="">Data de nascimento</label>
             <input v-if="showSignup" v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
            
