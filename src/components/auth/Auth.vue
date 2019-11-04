@@ -5,7 +5,7 @@
             <img v-else src="@/assets/logo.png" width="200" alt="Logo" />
             
             <hr>
-            <div class="auth-title">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
+            <div class="auth-title">{{ showSignup ? 'Teste' : 'Login' }}</div>
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label>   
             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
             <input  v-if="user.cientista === true && showSignup " value="Sim :)" type="text">
