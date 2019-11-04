@@ -3,10 +3,10 @@
         <div class="auth-modal">
             <img src="@/assets/logo.png" width="200" alt="Logo" />
             <hr>
-            <div class="auth-title">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
+            <div class="h4 text-center mb-4">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
 
             <input v-if="showSignup" v-model="user.name" type="text" placeholder="Nome">
-            <input v-model="user.email" name="email" type="text" placeholder="E-mail">
+            <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
             <label v-if="showSignup" for="">Data de nascimento</label>
             <input v-if="showSignup" v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label>   
