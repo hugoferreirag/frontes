@@ -5,7 +5,7 @@
             <hr>
             <div class="auth-title">{{ showSignup ? 'Cadastro' : 'Login' }}</div>
 
-            <input v-if="showSignup" v-model="user.name" type="text" placeholder="Nome">
+            <input v-if="showSignup" append-icon="place" v-model="user.name" type="text" placeholder="Nome">
             <input v-model="user.email" name="email" type="text" placeholder="E-mail">
             <label v-if="showSignup" for="">Data de nascimento</label>
             <input v-if="showSignup" v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
