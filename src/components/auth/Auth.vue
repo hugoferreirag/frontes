@@ -22,7 +22,7 @@
             <div v-else></div>
            
           
-                <label  v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
+            <label v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
             <inputv-if="showSignup && user.cientista===true"  v-model="user.trabalho_data" name="data" type="date" placeholder="">
             <inputv-if="showSignup && user.cientista===true"  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
             <input v-if="showSignup && user.cientista===true"  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
