@@ -95,7 +95,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url("giff.gif");
+        background: #2460ae;
     }
     .auth-modal {
         background-color:red;
