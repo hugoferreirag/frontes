@@ -1,10 +1,6 @@
 <template>
 	<div id="app" :class="{'hide-menu': !isMenuVisible || !user}">
-<<<<<<< HEAD
 		<Header title="Linked TI - Rede social certa para cientistas de dados" 
-=======
-		<Header title="Linked TI - Rede social" 
->>>>>>> 238e6cb4e9b44e3668e8315675acec5b2bd4a0b8
 			:hideToggle="!user"
 			:hideUserDropdown="!user" />
 		<Menu v-if="user" />
