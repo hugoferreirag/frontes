@@ -17,7 +17,7 @@
             <input v-model="user.password" name="password" type="password" placeholder="Senha">
             <input v-if="showSignup" v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">
-                <label for="">Quando começou no ramo da Ciência da computação?</label>
+            <label v-if="showSignup" for="">Quando começou no ramo da Ciência da computação?</label>
             <input v-if="showSignup" v-model="user.trabalho_data" name="data" type="date" placeholder="">
             <input v-if="showSignup" v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
             <input v-if="showSignup" v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
@@ -81,6 +81,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url("giff.gif");
     }
 
     .auth-modal {
