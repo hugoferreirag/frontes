@@ -2,7 +2,7 @@
     <div class="auth-content">
         <div class="auth-modal">
             <img v-if="showSignup" src="@/assets/logo.png" width="200" alt="Logo" />
-             <img v-if="!showSignup" src="@/assets/Sem título.png" width="200" alt="Logo" />
+             <img v-if="!showSignup" src="@/assets/Sem título.png" width="100" alt="Logo" />
             <hr>
             <div class="h4 text-center mb-4">{{ showSignup ? 'Cadastrar' : 'Entrar' }}</div>
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
