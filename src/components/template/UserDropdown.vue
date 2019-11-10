@@ -31,6 +31,9 @@ export default {
             localStorage.removeItem(userKey)
             this.$store.commit('setUser', null)
             this.$router.push({ name: 'auth' })
+        },
+        editar(){
+             this.$router.push({ path:`/editar/${this.user.id}` });
         }
     }
 }
