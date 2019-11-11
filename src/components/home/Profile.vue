@@ -33,8 +33,18 @@
             <div>
 
                 <hr>
-                <img src="" alt="">
-                <h5>as</h5> 
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Sou um progamador e tanto ! Sei node é Vue</h5> 
+                <hr>
+
+                <hr>
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Desenvolva e evolua !!!</h5> 
+                <hr>
+
+                <hr>
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Viva a tecnologia !!</h5> 
                 <hr>
             </div>
         <div class="load-more">

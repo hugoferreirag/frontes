@@ -23,6 +23,26 @@
                          
                 </div>
             </div>
+             <div>
+                <h5>Ultimas Postagens</h5>
+            </div>
+            <div>
+
+                <hr>
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Sou um progamador e tanto ! Sei node é Vue</h5> 
+                <hr>
+
+                <hr>
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Desenvolva e evolua !!!</h5> 
+                <hr>
+
+                <hr>
+                <img src="https://picsum.photos/125/125/?image=58" alt="">
+                <h5>Viva a tecnologia !!</h5> 
+                <hr>
+            </div>
         <div class="load-more">
             <button v-if="loadMore"
                 class="btn btn-lg btn-outline-primary"
