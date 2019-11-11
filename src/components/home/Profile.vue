@@ -18,10 +18,10 @@
 
 
                 <div class="col-md-6">
-                       <h5>Publique agora {{post}}!</h5> 
-                       <input v-model="post" type="text">
+                       <h5>Publique agora !</h5> 
+                       <textarea name="" v-model="post.text" placeholder="Digite aqui" id="" cols="60" rows="5"></textarea> 
                        <button variant="primary" @click="postar">Postar</button>
-                       <h5>as{{post}}</h5>
+                       
                          <!-- <b-button variant='outline-success'>Adicionar</b-button> <br>
                          <b-button variant='outline-primary'>Sobre..</b-button> <br> -->
                          
