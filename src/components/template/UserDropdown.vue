@@ -11,6 +11,7 @@
             <router-link to="/admin" v-if="user.admin">
                 <i class="fa fa-cogs"></i> Administração
             </router-link>
+            <a href  @click="perfil"><i class="fa fa-sign-out"></i> Meu Perfil</a>
             <a href  @click="editar"><i class="fa fa-sign-out"></i> Editar</a>
             <a href @click.prevent="logout"><i class="fa fa-sign-out"></i> Sair</a>
         </div>
@@ -34,6 +35,9 @@ export default {
         },
         editar(){
              this.$router.push({ path:`/editar/${this.user.id}` });
+        },
+        perfil(){
+             this.$router.push({ path:`/profile/${this.user.id}` });
         }
     }
 }

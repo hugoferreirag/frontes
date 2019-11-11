@@ -5,6 +5,7 @@
         </a>
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
+            <input style="margin-left:50px" placeholder="Pesquise Cientistas.. " type="text">
         </h1>
         <UserDropdown v-if="!hideUserDropdown" />
     </header>

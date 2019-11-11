@@ -11,31 +11,23 @@
             <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
              <input v-model="user.password" name="password" type="password" placeholder="Senha">
                <input v-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
-                type="password" placeholder="Confirme a Senha">
-
-            <label v-if="showSignup" for="">Quando começou no ramo da Ciência da computação?</label>
-            <input v-if="showSignup" v-model="user.trabalho_data" name="data" type="date" placeholder="">
-            <input v-if="showSignup" v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
-            <input v-if="showSignup" v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
-            <input v-if="showSignup" v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
-            <button v-if="showSignup" @click="signup">Registrar</button>
-             
-            
-            <label v-if="showSignup && user.cientista===true"  for="">Data de nascimento</label>
-            <input v-if="showSignup && user.cientista===true"  v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
-              
-           
+                type="password" placeholder="Confirme a Senha">     
             
             <div v-else></div>
            
-          
-            <label v-if="showSignup && user.cientista===true" for="">Quando começou no ramo da Ciência da computação??</label>
-            <input v-if="showSignup && user.cientista===true"  v-model="user.trabalho_data" name="data" type="date" placeholder="">
-            <input v-if="showSignup && user.cientista===true"  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
-            <input v-if="showSignup && user.cientista===true"  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
-            <input v-if="showSignup && user.cientista===true"  v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
+            <div v-if="showSignup && user.cientista===true">
+
+              <label   for="">Data de nascimento</label>
+              <input   v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
+              <label for="">Quando começou no ramo da Ciência da computação??</label>
+              <input  v-model="user.trabalho_data" name="data" type="date" placeholder="">
+              <input  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
+              <input  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
+              <input  v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
+
+            </div>
             <button v-if="showSignup && user.cientista===true"   @click="signup">Registrar</button>
-            <button v-else @click="signin">Entrar</button>
+            <button v-if="!showSignup" @click="signin">Entrar</button>
 
             <a style="text-align:center" href @click.prevent="showSignup = !showSignup">
                 <span v-if="showSignup">Já tem cadastro? Acesse o Login!</span>

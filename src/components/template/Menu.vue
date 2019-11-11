@@ -1,12 +1,9 @@
 <template>
     <aside class="menu" v-show="isMenuVisible">
         <div class="menu-filter">
-            <i class="fa fa-search fa-lg"></i>
-            <input type="text" placeholder="Busque desenvolvedores..."
-                v-model="treeFilter" class="filter-field">
+            <img src="~@/assets/img/perfil.png" width="30" alt=""> <span style="color:white; margin-left:5px">Perfil</span>
         </div>
-        <Tree :data="treeData" :options="treeOptions"
-            :filter="treeFilter" ref="tree" />
+        
     </aside>
 </template>
 

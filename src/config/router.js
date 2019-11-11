@@ -6,6 +6,7 @@ import AdminPages from '@/components/admin/AdminPages'
 import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 import ArticleById from '@/components/article/ArticleById'
 import Auth from '@/components/auth/Auth'
+import Profile from '@/components/home/Profile'
 
 import { userKey } from '@/global'
 
@@ -29,6 +30,11 @@ const routes = [{
     name: 'articleById',
     path: '/articles/:id',
     component: ArticleById
+}, 
+ {
+    name: 'profile',
+    path: '/profile/:id',
+    component: Profile
 }, 
  {
     name: 'editar',

@@ -5,7 +5,7 @@
 
             <div class="col-md-6">
 
-                <b-img thumbnail fluid src="~@/assets/img/nene.jpg" alt="Image 1"></b-img>
+                <b-img style="margin-left:250px;" thumbnail fluid src="~@/assets/img/nene.jpg" alt="Image 1"></b-img>
 
             </div>
             <div class="col-md-6">
@@ -13,7 +13,7 @@
                 <h6>Nome:</h6>
                 <input v-model="userers.name"  type="text">
                 <h6>Email:</h6>
-                <input v-model="userers.email"  type="text">
+                <input v-model="userers.email"  type="email">
                 <h6>Nascimento:</h6>
                 <input v-model="userers.nascimento"  type="date">
                 <h6>Data de Inicio no Ramo:</h6>
@@ -21,7 +21,7 @@
                 <h6>Salário:</h6>
                 <input v-model="userers.salario"  type="number">
                 <h6>Empresa:</h6>
-                <input v-model="userers.empresa"  type="text">
+                <input v-model="userers.empresa" >
                 <h6>Senha:</h6>
                 <input v-model="userers.password"  type="password">
                 <h6>Confirme a senha:</h6>
@@ -33,19 +33,19 @@
 
        
     </div>
-</template>
+</template>nod
 
 <script>
+import { baseApiUrl, showError, userKey } from '@/global'
 import 'highlightjs/styles/dracula.css'
 import hljs from 'highlightjs/highlight.pack.js'
-import { baseApiUrl } from '@/global'
 import axios from 'axios'
 import PageTitle from '../template/PageTitle'
 
 export default {
     name: 'ArticleById',
     components: { PageTitle },
-    props:['user'],
+    props:['user'], 
     data: function() {
         return {
             userers: {
@@ -85,10 +85,10 @@ export default {
             
             name: this.user.name,
             email:this.user.email,
-            nascimento:'',
-            data_trabalho:'',
-            salario:0,
-            empresa:'',
+            nascimento:this.user.nascimento,
+            data_trabalho:this.user.trabalho_data,
+            salario:this.user.salario,
+            empresa:this.user.empresa,
             password:'',
             confirmPassword:''}
     },
