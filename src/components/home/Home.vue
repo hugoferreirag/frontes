@@ -1,7 +1,7 @@
 <template>
     <div class="home">
       
-         <button style="background-color:rgba(223,233,234)" @click="editar">Editar Dados</button>
+    
         <PageTitle icon="fa fa-home" main="Dashboard"
             sub="Rede Linked" />
           

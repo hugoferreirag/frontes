@@ -5,7 +5,7 @@
         </a>
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
-            <input style="margin-left:50px" placeholder="Pesquise Cientistas.. " type="text">
+            <input style="margin-left:50px" v-model="sharear" placeholder="Pesquise Cientistas.. " type="text">
         </h1>
         <UserDropdown v-if="!hideUserDropdown" />
     </header>
@@ -22,6 +22,11 @@ export default {
         hideToggle: Boolean,
         hideUserDropdown: Boolean
     },
+    datat(){
+        return{
+            sharear:''
+        }
+    },
     computed: {
         icon() {
             return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down"
@@ -30,6 +35,12 @@ export default {
     methods: {
         toggleMenu() {
             this.$store.commit('toggleMenu')
+        },
+        share(){
+            const url = `${baseApiUrl}/usersshare/${this.sharear}`
+            axios(url).then(res =>{
+                this.$router.push({ path:`/profile/${this.res}` });
+            })
         }
     }
 }

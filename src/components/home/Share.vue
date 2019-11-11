@@ -62,7 +62,7 @@ import PageTitle from '../template/PageTitle'
 
 
 export default {
-    name: 'Profile',
+    name: 'Share',
     components: { PageTitle },
     data: function() {
         return {

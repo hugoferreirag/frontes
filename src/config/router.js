@@ -7,6 +7,7 @@ import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 import ArticleById from '@/components/article/ArticleById'
 import Auth from '@/components/auth/Auth'
 import Profile from '@/components/home/Profile'
+import Share from '@/components/home/Share'
 
 import { userKey } from '@/global'
 
@@ -35,6 +36,11 @@ const routes = [{
     name: 'profile',
     path: '/profile/:id',
     component: Profile
+}, 
+ {
+    name: 'shares',
+    path: '/shares/:id',
+    component: Share
 }, 
  {
     name: 'editar',
