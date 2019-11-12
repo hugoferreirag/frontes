@@ -3,48 +3,12 @@
         <PageTitle 
              sub="Perfil" />
 
-            <div style="padding-left:80px; margin-bottom:20px;" class="row">
-                <div class="col-md-4 row">
-
-                    <b-img class="col-md-6" left thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img> <br>
-                        <div class="col-md-12">
-
-                         <span class="dados">{{ User.name }} </span> <br>
-                         <span class="dados">{{ User.nivel }}</span>
-
-                        </div>
-                         
-                </div>
-
-
-                <div class="col-md-6">
-                       <h5>Publique agora !</h5> 
-                       <textarea name="" v-model="post.text" placeholder="Digite aqui" id="" cols="60" rows="5"></textarea> 
-                       <button variant="primary" @click="postar">Postar</button>
-                       
-                         <!-- <b-button variant='outline-success'>Adicionar</b-button> <br>
-                         <b-button variant='outline-primary'>Sobre..</b-button> <br> -->
-                         
-                </div>
-            </div>
-            <div>
-                <h5>Ultimas Postagens</h5>
-            </div>
-            <div>
+      
+            <div v-for="value in usersshare" :key="value.id">
 
                 <hr>
                 <img src="https://picsum.photos/125/125/?image=58" alt="">
-                <h5>Sou um progamador e tanto ! Sei node é Vue</h5> 
-                <hr>
-
-                <hr>
-                <img src="https://picsum.photos/125/125/?image=58" alt="">
-                <h5>Desenvolva e evolua !!!</h5> 
-                <hr>
-
-                <hr>
-                <img src="https://picsum.photos/125/125/?image=58" alt="">
-                <h5>Viva a tecnologia !!</h5> 
+                <h5>{{value.name}}</h5> 
                 <hr>
             </div>
         <div class="load-more">
@@ -64,6 +28,7 @@ import PageTitle from '../template/PageTitle'
 export default {
     name: 'Share',
     components: { PageTitle },
+    props:['usersshare'],
     data: function() {
         return {
             User: {},
@@ -74,10 +39,10 @@ export default {
         }
     },
     methods: {
-        getUser() {
-            const url = `${baseApiUrl}/users/${this.User.id}`
-            axios(url).then(res => this.User = res.data)
-        },
+        // getUser() {
+        //     const url = `${baseApiUrl}/users/${this.User.id}`
+        //     axios(url).then(res => this.User = res.data)
+        // },
         getArticles() {
             const url = `${baseApiUrl}/categories/${this.User.id}/articles?page=${this.page}`
             axios(url).then(res => {

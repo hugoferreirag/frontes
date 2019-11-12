@@ -6,6 +6,7 @@
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
             <input style="margin-left:50px" v-model="sharear" placeholder="Pesquise Cientistas.. " type="text">
+            <button variant="primary" @click="share" >GO</button>
         </h1>
         <UserDropdown v-if="!hideUserDropdown" />
     </header>
@@ -39,7 +40,7 @@ export default {
         share(){
             const url = `${baseApiUrl}/usersshare/${this.sharear}`
             axios(url).then(res =>{
-                this.$router.push({ path:`/profile/${this.res}` });
+                this.$router.push({ path:`/share/${this.res}` });
             })
         }
     }
