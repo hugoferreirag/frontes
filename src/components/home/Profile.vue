@@ -2,31 +2,36 @@
     <div class="articles-by-User">
         <PageTitle 
              sub="Perfil" />
-
-            <div style="padding-left:80px; margin-bottom:20px;" class="row">
+                <div style="padding-left:80px" class="row">
                 <div class="col-md-4 row">
 
-                    <b-img class="col-md-6" left thumbnail fluid src="https://picsum.photos/125/125/?image=58" alt="Image 1"></b-img> <br>
-                        <div class="col-md-12">
+                         <b-img class="col-md-12" left thumbnail fluid src="https://picsum.photos/80/80/?image=58" alt="Image 1"></b-img>
 
-                         <span class="dados">{{ User.name }} </span> <br>
-                         <span class="dados">{{ User.nivel }}</span>
-
-                        </div>
-                         
                 </div>
 
-
                 <div class="col-md-6">
+                         <!-- <b-button variant='outline-success'>Adicionar</b-button>  -->
+                         <br> <hr>
+                         <span class="dados">Nome: {{ User.name }} </span> <br>
+                         <span class="dados">Senioridade: {{ User.nivel }}</span><br>
+                         <span class="dados">Empresa: {{ User.empresa }}</span><br>
+                         <span class="dados">Inicio da Carreira: {{ new Date(User.trabalho_data).toLocaleDateString() }}</span> <br>
+                         <span class="dados">Email :{{ User.email }}</span><br>
+                         <hr>
+                   <div class="col-md-6">
                        <h5>Publique agora !</h5> 
-                       <textarea name="" v-model="post.text" placeholder="Digite aqui" id="" cols="60" rows="5"></textarea> 
+                       <textarea name="" v-model="post" placeholder="Digite aqui" id="" cols="60" rows="5"></textarea> 
                        <button variant="primary" @click="postar">Postar</button>
                        
                          <!-- <b-button variant='outline-success'>Adicionar</b-button> <br>
                          <b-button variant='outline-primary'>Sobre..</b-button> <br> -->
                          
+                    </div>
                 </div>
             </div>
+                <br>
+                <br>
+                <hr>
             <div>
                 <h5>Ultimas Postagens</h5>
             </div>

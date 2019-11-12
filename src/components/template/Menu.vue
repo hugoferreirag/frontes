@@ -1,8 +1,25 @@
 <template>
     <aside class="menu" v-show="isMenuVisible">
-        <div class="menu-filter">
-            <img src="~@/assets/img/perfil.png" width="30" alt=""> <span style="color:white; margin-left:5px">Perfil</span>
-        </div>
+        <br>
+        <hr>
+        <ul>
+
+            <li>
+
+                <b-button variant="primary" style="font-size:12px;color:white" @click="share" >Pesquisar Cientistas</b-button>
+
+            </li>
+            <br>
+            <hr>
+            <li>
+
+                <img src="~@/assets/img/perfil.png" width="30" alt=""> <span style="color:white; margin-left:5px">Perfil</span>
+
+            </li>
+        </ul>
+    
+
+        
         
     </aside>
 </template>
@@ -42,6 +59,13 @@ export default {
             if(this.$mq === 'xs' || this.$mq === 'sm') {
                 this.$store.commit('toggleMenu', false)
             }
+        },
+              share(){
+            
+               this.$router.push({
+                name: 'shares'
+            })
+            
         }
     },
     mounted() {
@@ -54,7 +78,7 @@ export default {
     .menu {
         grid-area: menu;
         background: linear-gradient(to right, #232526, #414345);
-
+        width:200px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;

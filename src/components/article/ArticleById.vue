@@ -1,5 +1,7 @@
 <template>
     <div class="article-by-id">
+        <PageTitle 
+             sub="Editar Perfil" />
         <div class="row">
 
 
@@ -33,8 +35,7 @@
 
        
     </div>
-</template>nod
-
+</template>
 <script>
 import { baseApiUrl, showError, userKey } from '@/global'
 import 'highlightjs/styles/dracula.css'

@@ -5,8 +5,7 @@
         </a>
         <h1 class="title">
             <router-link to="/">{{ title }}</router-link>
-            <input style="margin-left:50px" v-model="sharear" placeholder="Pesquise Cientistas.. " type="text">
-            <button variant="primary" @click="share" >GO</button>
+            <!-- <input style="margin-left:50px" v-model="sharear" placeholder="Pesquise Cientistas.. " type="text"> -->
         </h1>
         <UserDropdown v-if="!hideUserDropdown" />
     </header>
@@ -14,7 +13,8 @@
 
 <script>
 import UserDropdown from './UserDropdown'
-
+import { baseApiUrl } from '@/global'
+import axios from 'axios'
 export default {
     name: 'Header',
     components: { UserDropdown },
@@ -37,12 +37,7 @@ export default {
         toggleMenu() {
             this.$store.commit('toggleMenu')
         },
-        share(){
-            const url = `${baseApiUrl}/usersshare/${this.sharear}`
-            axios(url).then(res =>{
-                this.$router.push({ path:`/share/${this.res}` });
-            })
-        }
+  
     }
 }
 </script>

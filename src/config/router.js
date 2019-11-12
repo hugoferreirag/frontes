@@ -39,12 +39,13 @@ const routes = [{
 }, 
  {
     name: 'shares',
-    path: '/shares/:id',
-    component: Share
+    path: '/shares/',
+    component: Share,
+    props:true
 }, 
  {
     name: 'editar',
-    path: '/editar/:id',
+    path: '/editar/:users',
     component: ArticleById,
     props:true
 }, 
