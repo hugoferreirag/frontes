@@ -17,9 +17,9 @@
             <div v-else></div>
            
             <div v-if="showSignup && user.cientista===true">
-                 <label for="cientista">É um cientista da Computação ?</label> 
-             <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder=""> 
-             
+            <label for="cientista">É um cientista da Computação ?</label> 
+             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
+             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
             <label  for="text-password">Nome:</label>
             <input v-model="user.name" type="text" placeholder="Nome">
       
