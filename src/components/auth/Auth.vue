@@ -101,7 +101,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background:url( "~@/assets/img/giff.gif");
+ 
 }
 .auth-modal {
   background-color: white;
