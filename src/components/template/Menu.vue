@@ -4,7 +4,7 @@
     <br>
     <div>
   <b-nav vertical class="w-25">
-    <b-nav-item active href="/shares"><img  src="@/assets/Sem título.png"></b-nav-item>
+    <b-nav-item active href="/shares"><img   width="50" src="@/assets/Sem título.png"></b-nav-item>
     <b-nav-item active href="/shares">Pesquisar Cientistas</b-nav-item>
     <b-nav-item active href="/shares">Acessar Feed</b-nav-item>
    
