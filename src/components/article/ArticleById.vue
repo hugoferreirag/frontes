@@ -71,8 +71,11 @@ export default {
         editar(){
                 axios.put(`${baseApiUrl}/users/${this.user.id}`, this.userers)
                 .then(() => {
+                    this.$router.push({ name: 'home' });
                     this.$toasted.global.defaultSuccess()
                     this.userers = {}
+                    
+                  
 
                
                 })
