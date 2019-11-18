@@ -30,6 +30,15 @@
                <label  for="text-password">Confirmar Senha:</label>
                <input  v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">     
+               <b-form-group label="Selecione áreas do seu interesse:">
+      <b-form-checkbox-group
+        id="checkbox-group-1"
+        v-model="selected"
+        :options="options"
+        name="flavour-1"
+      ></b-form-checkbox-group>
+    </b-form-group>
+
 
               <label   for="">Data de nascimento</label>
               <input   v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
@@ -67,6 +76,13 @@ export default {
     name: 'Auth',
     data: function() {
         return {
+        selected: [], // Must be an array reference!
+        options: [
+          { text: 'Big Data', value: 'BI' },
+          { text: 'Inteligência Artificial', value: 'apple' },
+          { text: 'Programação', value: 'pineapple' },
+          { text: 'UX', value: 'grape' }
+        ]
             showSignup: false,
             user: {},
             showPremium:false
