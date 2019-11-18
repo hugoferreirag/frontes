@@ -1,24 +1,13 @@
 <template>
     <aside class="menu" v-show="isMenuVisible">
-        <br>
-        <hr>
-        <ul>
-
-            <li>
-
-                <b-button variant="primary" style="font-size:12px;color:white" @click="share" >Pesquisar Cientistas</b-button>
-
-            </li>
-            <br>
-            <hr>
-            <li>
-               <b-button variant="primary" style="font-size:12px;color:white" @click="perfil()" >Acessar Feed</b-button>
-               <b-button variant="primary" style="font-size:12px;color:white" @click="share" >Pesquisar Amigos</b-button
-               <b-button variant="primary" style="font-size:12px;color:white" @click="perfil()" >Perfil Principal</b-button>
-
-            </li>
-        </ul>
     
+    <div>
+  <b-nav vertical class="w-25">
+    <b-nav-item href="/shares">Pesquisar Cientistas</b-nav-item>
+    <b-nav-item href="/shares">Acessar Feed</b-nav-item>
+  </b-nav>
+</div>
+      
 
         
         
