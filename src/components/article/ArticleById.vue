@@ -29,7 +29,9 @@
                 <h6>Confirme a senha:</h6>
                 <input v-model="userers.confirmPassword"  type="password"> <br><hr>
                 <button @click="editar">Confirmar Edição</button> <button @click="userers={}">Resetar</button>
-                
+                <b-alert v-model="showDismissibleAlert" variant="sucess" dismissible>
+    Sucesso!
+    </b-alert>
             </div>
         </div>
 
@@ -49,6 +51,7 @@ export default {
     props:['user'], 
     data: function() {
         return {
+           showDismissibleAlert: false,
             userers: {
             nivel:'senior',
             name: '',
@@ -68,9 +71,13 @@ export default {
         }
     },
     methods:{
+     showAlert() {
+        this.dismissCountDown = this.dismissSecs
+      },
         editar(){
                 axios.put(`${baseApiUrl}/users/${this.user.id}`, this.userers)
                 .then(() => {
+                    this.showDismissibleAlert=true;
                     this.$router.push({ name: 'home' });
                     this.$toasted.global.defaultSuccess()
                     this.userers = {}
