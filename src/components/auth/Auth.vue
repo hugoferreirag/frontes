@@ -82,7 +82,7 @@ export default {
           { text: 'Inteligência Artificial', value: 'apple' },
           { text: 'Programação', value: 'pineapple' },
           { text: 'UX', value: 'grape' }
-        ]
+        ],
             showSignup: false,
             user: {},
             showPremium:false
