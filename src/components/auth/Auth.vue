@@ -66,6 +66,7 @@
                
             </a>
         </div>
+         <b-spinner  v-if="teste" variant="primary" label="Text Centered"></b-spinner>
     </div>
 </template>
 
@@ -76,6 +77,7 @@ export default {
     name: 'Auth',
     data: function() {
         return {
+        teste:false,
         selected: [], // Must be an array reference!
         options: [
           { text: 'Big Data', value: 'BI' },
@@ -90,8 +92,10 @@ export default {
     },
     methods: {
         signin() {
+         this.teste=true;
             axios.post(`${baseApiUrl}/signin`, this.user)
                 .then(res => {
+                    this.teste=false;
                     this.$store.commit('setUser', res.data)
                     localStorage.setItem(userKey, JSON.stringify(res.data))
                     this.$router.push({ path: '/' })
@@ -101,8 +105,10 @@ export default {
                 )
         },
         signup() {
+        this.teste=true;
             axios.post(`${baseApiUrl}/signup`, this.user)
                 .then(() => {
+                    this.teste=false;
                     this.$toasted.global.defaultSuccess()
                     this.user = {}
                     this.showSignup = false
