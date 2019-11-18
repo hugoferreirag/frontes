@@ -12,8 +12,9 @@
             <br>
             <hr>
             <li>
-
-                <img src="~@/assets/img/perfil.png" width="30" alt=""> <span style="color:white; margin-left:5px">Perfil</span>
+               <b-button variant="primary" style="font-size:12px;color:white" @click="perfil()" >Acessar Feed</b-button>
+               <b-button variant="primary" style="font-size:12px;color:white" @click="share" >Pesquisar Amigos</b-button
+               <b-button variant="primary" style="font-size:12px;color:white" @click="perfil()" >Perfil Principal</b-button>
 
             </li>
         </ul>
@@ -46,6 +47,9 @@ export default {
     },
  
     methods: {
+     perfil(){
+             this.$router.push({ path:`/profile/${this.user.id}` });
+        },
         data() {
             const url = `${baseApiUrl}/users`
             return axios.get(url).then(res => res.data)
