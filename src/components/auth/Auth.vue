@@ -6,7 +6,7 @@
             <hr>
             <div class="h4 text-center mb-4">{{ showSignup ? 'Sign Up' : 'Log In' }}</div>
              <label  v-if="!showSignup" for="text-password">Email:</label>
-            <input icon="envelope"  v-if="!showSignup" :state="validation" v-model="user.email" name="email" type="text" placeholder="E-mail">
+            <input icon="envelope"  v-if="!showSignup"  v-model="user.email" name="email" type="text" placeholder="E-mail">
               <label   v-if="!showSignup" for="text-password">Senha:</label>
              <input     v-if="!showSignup" v-model="user.password"  :state="validation" name="password" type="password" placeholder="Senha">
             
@@ -95,11 +95,7 @@ export default {
             showPremium:false
         }
     },
-    computed: {
-      validation() {
-        return this.user.email !==""  && this.user.password !=="
-      }
-    },
+   
     methods: {
         signin() {
          this.teste=true;
