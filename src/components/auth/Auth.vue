@@ -12,22 +12,24 @@
             
             
           
-             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
-             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
-            <label  v-if="showSignup && user.cientista===true" for="text-password">Nome:</label>
-            <input v-if="showSignup && user.cientista===true"  v-model="user.name" type="text" placeholder="Nome">
-      
-            <label  v-if="showSignup && user.cientista===true" for="text-password">Email:</label>
-            <input  v-if="showSignup && user.cientista===true" icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
-             <label  v-if="showSignup && user.cientista===true" for="text-password">Senha:</label>
-             <input    v-if="showSignup && user.cientista===true" v-model="user.password" name="password" type="password" placeholder="Senha">
-               <label  v-if="showSignup && user.cientista===true" for="text-password">Confirmar Senha:</label>
-               <input v-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
-                type="password" placeholder="Confirme a Senha">     
+        
             
             <div v-else></div>
            
             <div v-if="showSignup && user.cientista===true">
+                 <label for="cientista">É um cientista da Computação ?</label> 
+             <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder="Sim"> 
+              <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder="Não"> 
+            <label  for="text-password">Nome:</label>
+            <input v-model="user.name" type="text" placeholder="Nome">
+      
+            <label  for="text-password">Email:</label>
+            <input  icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
+             <label for="text-password">Senha:</label>
+             <input    v-model="user.password" name="password" type="password" placeholder="Senha">
+               <label  for="text-password">Confirmar Senha:</label>
+               <input  v-model="user.confirmPassword"
+                type="password" placeholder="Confirme a Senha">     
 
               <label   for="">Data de nascimento</label>
               <input   v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
