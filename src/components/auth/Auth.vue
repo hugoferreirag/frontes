@@ -6,9 +6,9 @@
             <hr>
             <div class="h4 text-center mb-4">{{ showSignup ? 'Sign Up' : 'Log In' }}</div>
              <label  v-if="!showSignup" for="text-password">Email:</label>
-            <input icon="envelope"  v-if="!showSignup" v-model="user.email" name="email" type="text" placeholder="E-mail">
+            <input icon="envelope"  v-if="!showSignup" :state="validation" v-model="user.email" name="email" type="text" placeholder="E-mail">
               <label   v-if="!showSignup" for="text-password">Senha:</label>
-             <input     v-if="!showSignup" v-model="user.password" name="password" type="password" placeholder="Senha">
+             <input     v-if="!showSignup" v-model="user.password"  :state="validation" name="password" type="password" placeholder="Senha">
             
             
             <div v-else></div>
@@ -66,8 +66,12 @@
                 <span  v-else>Ou assine a versão premium!</span>
                
             </a>
+               <b-spinner  v-if="teste" variant="primary" label="Text Centered"></b-spinner>
+               <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
+      Usuário ou Senha incorretos!!
+    </b-alert>
         </div>
-         <b-spinner  v-if="teste" variant="primary" label="Text Centered"></b-spinner>
+      
     </div>
 </template>
 
@@ -78,18 +82,23 @@ export default {
     name: 'Auth',
     data: function() {
         return {
+        showDismissibleAlert:false,
         teste:false,
         selected: [], // Must be an array reference!
         options: [
           { text: 'Big Data', value: 'BI' },
           { text: 'Inteligência Artificial', value: 'apple' },
           { text: 'Programação', value: 'pineapple' },
-          { text: 'UX', value: 'grape' }
         ],
             showSignup: false,
             user: {},
             showPremium:false
         }
+    },
+    computed: {
+      validation() {
+        return this.user.email !==""  && this.user.password !=="
+      }
     },
     methods: {
         signin() {
@@ -102,6 +111,7 @@ export default {
                     this.$router.push({ path: '/' })
                 })
                 .catch(
+                 this.showDismissibleAlert=true;
                 
                 )
         },
@@ -114,7 +124,9 @@ export default {
                     this.user = {}
                     this.showSignup = false
                 })
-                .catch(showError)
+                .catch( 
+                this.showDismissibleAlert=true;
+                )
         }
     }
 }
