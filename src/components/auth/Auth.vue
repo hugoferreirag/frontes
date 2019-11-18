@@ -107,7 +107,7 @@ export default {
                     this.$router.push({ path: '/' })
                 })
                 .catch(
-                 this.showDismissibleAlert=true;
+                 this.showDismissibleAlert=true,
                 
                 )
         },
@@ -121,7 +121,7 @@ export default {
                     this.showSignup = false
                 })
                 .catch( 
-                this.showDismissibleAlert=true;
+                this.showDismissibleAlert=true,
                 )
         }
     }
