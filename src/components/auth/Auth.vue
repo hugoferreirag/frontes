@@ -20,7 +20,7 @@
            
             <div v-if="showSignup && user.cientista===true">
             
-             <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
+
             <label  for="text-password">Nome:</label>
             <input v-model="user.name" type="text" placeholder="Nome">
       
