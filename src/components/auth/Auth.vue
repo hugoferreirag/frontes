@@ -2,14 +2,26 @@
     <div class="auth-content">
         <div class="auth-modal">
             <img v-if="showSignup" src="@/assets/logo.png" width="100" alt="Logo" />
-             <img v-if="!showSignup" src="@/assets/Sem título.png" width="100" alt="Logo" />
+             <img v-if="!showSignup" class="imagem" src="@/assets/Sem título.png" width="200" alt="Logo" />
             <hr>
-            <div class="h4 text-center mb-4">{{ showSignup ? 'Cadastrar' : 'Entrar' }}</div>
+            <div class="h4 text-center mb-4">{{ showSignup ? 'Sign Up' : 'Log In' }}</div>
+             <label  v-if="!showSignup" for="text-password">Email:</label>
+            <input icon="envelope"  v-if="!showSignup" v-model="user.email" name="email" type="text" placeholder="E-mail">
+              <label   v-if="!showSignup" for="text-password">Senha:</label>
+             <input     v-if="!showSignup" v-model="user.password" name="password" type="password" placeholder="Senha">
+            
+            
+          
              <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
              <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder=""> 
+            <label  v-if="showSignup && user.cientista===true" for="text-password">Nome:</label>
             <input v-if="showSignup && user.cientista===true"  v-model="user.name" type="text" placeholder="Nome">
-            <input icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
-             <input v-model="user.password" name="password" type="password" placeholder="Senha">
+      
+            <label  v-if="showSignup && user.cientista===true" for="text-password">Email:</label>
+            <input  v-if="showSignup && user.cientista===true" icon="envelope" v-model="user.email" name="email" type="text" placeholder="E-mail">
+             <label  v-if="showSignup && user.cientista===true" for="text-password">Senha:</label>
+             <input    v-if="showSignup && user.cientista===true" v-model="user.password" name="password" type="password" placeholder="Senha">
+               <label  v-if="showSignup && user.cientista===true" for="text-password">Confirmar Senha:</label>
                <input v-if="showSignup && user.cientista===true"  v-model="user.confirmPassword"
                 type="password" placeholder="Confirme a Senha">     
             
@@ -21,8 +33,11 @@
               <input   v-model="user.nascimento" name="data" type="date" placeholder="Data de Nascimento">
               <label for="">Quando começou no ramo da Ciência da computação??</label>
               <input  v-model="user.trabalho_data" name="data" type="date" placeholder="">
+              <label   for="">Empresa Atual</label>
               <input  v-model="user.empresa" name="empresa" type="text" placeholder="Nome da atual empresa">
+               <label   for="">Nivel de Instrução</label>
               <input  v-model="user.nivel" name="nivel" type="text" placeholder="Nivel de instrução">
+               <label   for="">Salário Atual</label>
               <input  v-model="user.salario" name="salario" type="number" placeholder="Salário atual">
 
             </div>
@@ -86,6 +101,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  background:url( "../assets/img/giff.gif");
 }
 .auth-modal {
   background-color: white;
