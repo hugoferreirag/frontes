@@ -9,13 +9,14 @@
             <input icon="envelope"  v-if="!showSignup" v-model="user.email" name="email" type="text" placeholder="E-mail">
               <label   v-if="!showSignup" for="text-password">Senha:</label>
              <input     v-if="!showSignup" v-model="user.password" name="password" type="password" placeholder="Senha">
-            <label  v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
-             <label v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
             
-          
-        
             
             <div v-else></div>
+            <label  v-if="showSignup" for="cientista">É um cientista da Computação ?</label> 
+            <input v-model="user.cientista" v-if="showSignup" name="cientista" type="checkbox" placeholder="">
+          
+        
+        
            
             <div v-if="showSignup && user.cientista===true">
             
