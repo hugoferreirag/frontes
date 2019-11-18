@@ -18,8 +18,8 @@
            
             <div v-if="showSignup && user.cientista===true">
                  <label for="cientista">É um cientista da Computação ?</label> 
-             <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder="Sim"> 
-              <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder="Não"> 
+             <input v-model="user.cientista"  name="cientista" type="checkbox" placeholder=""> 
+             
             <label  for="text-password">Nome:</label>
             <input v-model="user.name" type="text" placeholder="Nome">
       
