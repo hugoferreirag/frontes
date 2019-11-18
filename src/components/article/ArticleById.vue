@@ -7,7 +7,7 @@
 
             <div class="col-md-6">
 
-                <b-img style="margin-left:250px;" thumbnail fluid src="~@/assets/img/nene.jpg" alt="Image 1"></b-img>
+                <b-img style="margin-left:250px;" thumbnail fluid src="~@/assets/img/logo.png" alt="Image 1"></b-img>
 
             </div>
             <div class="col-md-6">
